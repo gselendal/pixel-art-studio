@@ -5,11 +5,9 @@ import imageio
 import math
 import numpy as np
 
-#face = misc.face()
-#imageio.imsave('face.png', face)
-face = imageio.imread('ben2.png')
-
-print(face.shape[1])
+face = misc.face()
+imageio.imsave('face.png', face)
+face = imageio.imread('face.png')
 
 
 def create_pixel_art(img):
@@ -25,7 +23,6 @@ def create_pixel_art(img):
     cols = []
 
     for i in range(_w):
-        print(i)
         if (not(i % step_size < (step_size / 5))):
             cols.append(i)
 
@@ -34,7 +31,6 @@ def create_pixel_art(img):
     rows = []
 
     for j in range(_h):
-        print(j)
         if (not(j % step_size < (step_size / 5))):
             rows.append(j)
 
